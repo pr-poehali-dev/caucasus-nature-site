@@ -1,73 +1,58 @@
-import { Card, CardContent } from "@/components/ui/card";
-
 const AttractionsGallery = () => {
   const attractions = [
     {
-      name: "Эльбрус",
-      description: "Высочайшая вершина Кавказа и Европы",
+      id: 1,
+      title: "Эльбрус",
+      description: "Высочайшая вершина России",
       image:
-        "https://cdn.poehali.dev/files/66cb98a9-c0d7-4465-a1c8-e40e88d7e635.jpg",
-      height: "5642 м",
+        "https://images.unsplash.com/photo-1571418212037-7c90f9e8959c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     },
     {
-      name: "Казбек",
-      description: "Священная гора грузинских легенд",
+      id: 2,
+      title: "Домбай",
+      description: "Горнолыжный курорт и природный заповедник",
       image:
-        "https://cdn.poehali.dev/files/69757d59-2768-4971-aaca-b88e4481084f.jpeg",
-      height: "5033 м",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     },
     {
-      name: "Домбай",
-      description: "Жемчужина Карачаево-Черкесии",
+      id: 3,
+      title: "Приэльбрусье",
+      description: "Уникальные альпийские луга",
       image:
-        "https://cdn.poehali.dev/files/ad6a1dc5-ed25-4318-83ab-0445a347b1a4.jpeg",
-      height: "4046 м",
-    },
-    {
-      name: "Архыз",
-      description: "Горный курорт с кристально чистым воздухом",
-      image:
-        "https://cdn.poehali.dev/files/3f2b5b37-12ec-40e1-bff5-fc7d7a481f3c.jpg",
-      height: "2000 м",
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     },
   ];
 
   return (
-    <section className="py-20 bg-slate-900 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Величественные вершины
-          </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Каждая гора Кавказа имеет свой характер и неповторимую красоту
+    <section className="py-16 px-4 bg-emerald-900 text-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Достопримечательности</h2>
+          <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
+            Откройте для себя самые красивые места Кавказа
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {attractions.map((attraction, index) => (
-            <Card
-              key={index}
-              className="bg-slate-800 border-slate-700 hover:bg-slate-700 transition-colors duration-300 group"
-            >
-              <div className="relative overflow-hidden rounded-t-lg">
-                <div
-                  className="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
-                  style={{ backgroundImage: `url(${attraction.image})` }}
+        <div className="grid md:grid-cols-3 gap-8">
+          {attractions.map((attraction) => (
+            <div key={attraction.id} className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-xl">
+                <img
+                  src={attraction.image}
+                  alt={attraction.title}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute top-3 right-3 bg-emerald-600 text-white px-2 py-1 rounded text-sm font-semibold">
-                  {attraction.height}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-4 left-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-1">
+                    {attraction.title}
+                  </h3>
+                  <p className="text-emerald-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {attraction.description}
+                  </p>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {attraction.name}
-                </h3>
-                <p className="text-slate-300 text-sm">
-                  {attraction.description}
-                </p>
-              </CardContent>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
