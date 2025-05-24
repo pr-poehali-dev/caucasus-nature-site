@@ -5,7 +5,7 @@ const FloraFauna = () => {
     {
       name: "Кавказский леопард",
       description: "Редчайший подвид, находящийся под угрозой исчезновения",
-      status: "Критически угрожаемый",
+      status: "вымирающий",
       emoji: "🐆",
     },
     {
@@ -77,7 +77,7 @@ const FloraFauna = () => {
                     <p className="text-slate-600 mb-2">{animal.description}</p>
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                        animal.status === "Критически угрожаемый"
+                        animal.status === "вымирающий"
                           ? "bg-red-100 text-red-700"
                           : animal.status === "Уязвимый"
                             ? "bg-yellow-100 text-yellow-700"
