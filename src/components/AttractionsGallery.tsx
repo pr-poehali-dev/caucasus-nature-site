@@ -6,28 +6,28 @@ const AttractionsGallery = () => {
       name: "Эльбрус",
       description: "Высочайшая вершина Кавказа и Европы",
       image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://cdn.poehali.dev/files/66cb98a9-c0d7-4465-a1c8-e40e88d7e635.jpg",
       height: "5642 м",
     },
     {
       name: "Казбек",
       description: "Священная гора грузинских легенд",
       image:
-        "https://images.unsplash.com/photo-1608890042722-95400fe22ad5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://cdn.poehali.dev/files/69757d59-2768-4971-aaca-b88e4481084f.jpeg",
       height: "5033 м",
     },
     {
       name: "Домбай",
       description: "Жемчужина Карачаево-Черкесии",
       image:
-        "https://images.unsplash.com/photo-1564135433317-5c6013f5bb05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://cdn.poehali.dev/files/ad6a1dc5-ed25-4318-83ab-0445a347b1a4.jpeg",
       height: "4046 м",
     },
     {
       name: "Архыз",
       description: "Горный курорт с кристально чистым воздухом",
       image:
-        "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://cdn.poehali.dev/files/3f2b5b37-12ec-40e1-bff5-fc7d7a481f3c.jpg",
       height: "2000 м",
     },
   ];
